@@ -1,40 +1,147 @@
+html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的网页标题</title>
+    <title>个人主页</title>
     <style>
-        /* 在这里添加CSS样式 */
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
         }
-        h1 {
-            color: blue;
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #50b3a2;
+            color: white;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #ffffff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            margin: 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .banner {
+            padding: 40px;
+            color: #ffffff;
+            background: url('banner-bg.jpg') no-repeat 0px -70px;
+            background-size: cover;
+        }
+        .banner h1 {
+            margin: 0;
+            font-size: 55px;
+        }
+        .banner p {
+            font-size: 20px;
+        }
+        .main .content {
+            float: left;
+            width: 70%;
+        }
+        .main .sidebar {
+            float: right;
+            width: 30%;
+            background: #e8491d;
+            padding: 20px;
+            color: #ffffff;
+        }
+        .main .content h2, .main .sidebar h2 {
+            padding-bottom: 10px;
+        }
+        .main .content p, .main .sidebar p {
+            padding-bottom: 20px;
+        }
+        footer {
+            background: #50b3a2;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>个人主页</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current">首页</li>
+                    <li>关于我</li>
+                    <li>服务</li>
+                    <li>联系方式</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <h1>欢迎来到我的网页</h1>
-    <p>这是一个段落。</p>
+    <section class="banner">
+        <div class="container">
+            <h1>欢迎来到我的个人主页</h1>
+            <p>这里展示我的个人项目和兴趣</p>
+        </div>
+    </section>
 
-    <ul>
-        <li>列表项1</li>
-        <li>列表项2</li>
-        <li>列表项3</li>
-    </ul>
+    <section class="main">
+        <div class="container">
+            <div class="content">
+                <h2>关于我</h2>
+                <p>这里是一些关于我的信息，包括我的背景、兴趣和技能。</p>
+                <!-- 更多内容可以添加在这里 -->
+            </div>
+            <div class="sidebar">
+                <h2>联系方式</h2>
+                <p>您可以通过以下方式联系我：</p>
+                <ul>
+                    <li>Email: example@example.com</li>
+                    <li>Phone: 123-456-7890</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-    <img src="image.jpg" alt="描述文字">
-
-    这是一个链接
-
-    <script>
-        // 在这里添加JavaScript代码
-        document.addEventListener('DOMContentLoaded', (event) => {
-            console.log('网页已加载完毕！');
-        });
-    </script>
-
+    <footer>
+        <p>版权所有 &copy; 2024 个人主页</p>
+    </footer>
 </body>
 </html>
